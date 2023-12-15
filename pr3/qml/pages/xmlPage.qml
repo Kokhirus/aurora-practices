@@ -1,0 +1,21 @@
+import QtQuick 2.0
+import Sailfish.Silica 1.0
+import QtQuick.XmlListModel 2.0
+
+Page {
+    XmlListModel {
+        id: xmlListModel
+        source: "https://www.cbr.ru/scripts/XML_daily.asp"
+        query: "/ValCurs/Valute"
+        XmlRole { name: "Name"; query: "Name/string()" }
+        XmlRole { name: "CharCode"; query: "CharCode/string()" }
+        XmlRole { name: "Value"; query: "Value/string()" }
+    }
+    ListView {
+        anchors.fill: parent
+        model: xmlListModel
+        delegate: Column {
+            Text { text: Name + " (" + CharCode + "): " + Value}
+        }
+    }
+}

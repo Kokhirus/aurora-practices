@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+X-Nemo-Application-Type=silica-qt5
+Icon=ru.auroraos.pr3
+Exec=/usr/bin/ru.auroraos.pr3
+Name=Practice 3
+Name[ru]=Практика 3
+
+[X-Application]
+Permissions=Sensors;Internet;UserDirs
+OrganizationName=ru.auroraos
+ApplicationName=pr3
+ExecDBus=/usr/bin/ru.auroraos.pr3
